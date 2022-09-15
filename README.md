@@ -9,9 +9,9 @@ Algumas informações extras sobre o projeto:
 <li>O tema do site é uma Hamburgueria com temas da cultura Geek.</li>
 </ul>
 <ol>
-<li>Cristiane: Co-responsável pela parte de design do site, usando UX, HTML e CSS.</li>
-<li>André: Co-responsável pela parte de design do site, usando UX e HTML/CSS, ajudando na parte de ideias e de desenvolvimento. </li>
-<li>Polaris: Responsável pela implementação do Javascript no site e organização do repositório, e co-responsável pelo design do site.</li>
-<li>Marcus: Responsável pela implementação do PHP no site e pelo banco de dados do projeto, também responsável pelos debuggs. </li>
-<li>Arthur: Responsável pela documentação do projeto.</li>
+  <li><strong>Cristiane:</strong> Co-responsável pela parte de design do site, usando UX, HTML e CSS.</li>
+<li><strong>André:</strong> Co-responsável pela parte de design do site, usando UX e HTML/CSS, ajudando na parte de ideias e de desenvolvimento. </li>
+<li><strong>Polaris:</strong> Responsável pela implementação do Javascript no site e organização do repositório, e co-responsável pelo design do site.</li>
+<li><strong>Marcus: </strong> Responsável pela implementação do PHP no site e pelo banco de dados do projeto, também responsável pelos debuggs. </li>
+<li><strong>Arthur:</strong> Responsável pela documentação do projeto.</li>
 </ol>
