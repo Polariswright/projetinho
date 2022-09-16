@@ -18,11 +18,6 @@ include "../adm/control.php";
 
                     </div>
                     <div class="mb-3 mt-3">
-                        <label for="tel" class="form-label">Telefone:</label>
-                        <input type="text" class="form-control" id="tel" name="tel" required maxlength="20">
-
-                    </div>
-                    <div class="mb-3 mt-3">
                         <label for="cel" class="form-label">Celular:</label>
                         <input type="text" class="form-control" id="cel" name="cel" required maxlength="20">
 
@@ -39,13 +34,13 @@ include "../adm/control.php";
                         <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
                         <label class="form-check-label" for="myCheck">Aceitar termos</label>
                     </div>
-                    <!-- Button to Open the Modal -->
+                    <!-- Butão para abrir o  Modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                       Se cadastrar
+                        Se cadastrar
                     </button>
 
-                    <!-- The Modal -->
-                    <div class="modal" id="myModal">
+                    <!-- O Modal -->
+                    <div class="modal text-center" id="myModal">
                         <div class="modal-dialog">
                             <div class="modal-content">
 
