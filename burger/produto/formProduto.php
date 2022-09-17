@@ -1,47 +1,44 @@
 <?php
 include "../adm/control.php";
 ?>
+
 <div class="container">
-    <!--Inicio do formulário(formulário padrão que pode ser modificado)-->
+    <!--Inicio do formulário(fomulário padrão que pode ser modificado)-->
     <div class="row justify-content-center">
         <div class="col-8">
             <div class="card alert bg-warning">
-                <form name="form" action="includeUser.php" class="was-validated" method="POST">
+                <h1 class="text-center">
+                    Cadastro de produtos
+                </h1>
+                <hr>
+                <form name="form" action="includeProduto.php" class="was-validated" method="POST">
                     <div class="mb-3 mt-3">
-                        <label for="login" class="form-label">Login:</label>
-                        <input type="text" class="form-control" id="login" name="login" placeholder="Login" required>
+                        <label for="nomePdt" class="form-label">Nome do produto:</label>
+                        <input type="text" class="form-control" id="nomePdt" name="nomePdt" required>
 
                     </div>
                     <div class="mb-3 mt-3">
-                        <label for="nome" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" required>
+                        <label for="tipoPdt" class="form-label">Tipo de produto:</label>
+                        <input type="text" class="form-control" id="tipoPdt" name="tipoPdt" required>
 
                     </div>
                     <div class="mb-3 mt-3">
-                        <label for="email" class="form-label">Nome:</label>
-                        <input type="text" class="form-control" id="nome" name="nome" required>
+                        <label for="tipoPdd" class="form-label">Tipo de pedido:</label>
+                        <input type="text" class="form-control" id="tipoPdd" name="tipoPdd" required>
 
                     </div>
                     <div class="mb-3 mt-3">
-                        <label for="cel" class="form-label">Celular:</label>
-                        <input type="text" class="form-control" id="cel" name="cel" required maxlength="20">
+                        <label for="preco" class="form-label">Preço do produto:</label>
+                        <input type="text" class="form-control" id="preco" name="preco" required maxlength="20">
 
-                    </div>
-                    <div class="mb-3 mt-3">
-                        <label for="endereco" class="form-label">Endereço:</label>
-                        <input type="text" class="form-control" id="endereco" name="endereco" required>
                     </div>
                     <div class="mb-3">
-                        <label for="pwd" class="form-label">Senha:</label>
-                        <input type="password" class="form-control" id="senha" placeholder="Enter password" name="senha" required>
-                    </div>
-                    <div class="form-check mb-3 text-start">
-                        <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
-                        <label class="form-check-label" for="myCheck">Aceitar termos</label>
+                        <label for="descricao" class="form-label">Descição do produto</label>
+                        <textarea class="form-control" id="descricao" rows="3" maxlength="150" name="descricao"></textarea>
                     </div>
                     <!-- Botão para abrir o  Modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                        Se cadastrar
+                        Cadastrar produto
                     </button>
 
                     <!--Inicio do Modal(modal padrão que pode ser modificado) -->
@@ -67,6 +64,7 @@ include "../adm/control.php";
                             </div>
                         </div>
                     </div>
+                    <!--Fim do modal-->
                 </form>
             </div>
         </div>

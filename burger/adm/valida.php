@@ -40,6 +40,7 @@ if (isset($_POST['login'])) {
     } else {
 
 ?>
+        <!--pequena notificação para caso a senha esteja incorreta(pode ser modificada)-->
         <div class="container mt-3">
             <div class="alert alert-danger alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
