@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hamburgeek</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim do corpo de Libras -->
+
+    <!--Início do navbar-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="teste.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Fim do navbar-->
+
+    <!--Início do section-->
+    <section class="container-fluid">
+
+        <!--Início do Carrossel-->
+        <div class="carrossel mt-5 border border-dark">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imgs/Sem-Título-1Prancheta-4.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgs/imagensPrancheta-5.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgs/imagensPrancheta-6.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!--Fim do Carrossel-->
+
+        <hr>
+
+        <!--Início dos Cards-->
+        <div class="container-fluid row">
+            <div class="card col-12 col-md-3">
+                <img src="imgs/burguer_1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <hr>
+                    <h5 class="card-title">Hamburguer</h5>
+                    <p class="card-text">Muito mais saboroso e agora com molho especial.</p>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Composição
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pão</a></li>
+                        <li><a class="dropdown-item" href="#">Carne</a></li>
+                        <li><a class="dropdown-item" href="#">Queijo Cheddar</a></li>
+                        <li><a class="dropdown-item" href="#">Cebola Roxa</a></li>
+                        <li><a class="dropdown-item" href="#">Tomate</a></li>
+                        <li><a class="dropdown-item" href="#">Picles</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link">Fazer pedido</a>
+                    <a href="#" class="card-link"></a>
+                </div>
+            </div>
+            <div class="card col-12 col-md-3">
+                <img src="imgs/burguer_1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <hr>
+                    <h5 class="card-title">Hamburguer</h5>
+                    <p class="card-text">Muito mais saboroso e agora com molho especial.</p>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Composição
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pão</a></li>
+                        <li><a class="dropdown-item" href="#">Carne</a></li>
+                        <li><a class="dropdown-item" href="#">Queijo Cheddar</a></li>
+                        <li><a class="dropdown-item" href="#">Cebola Roxa</a></li>
+                        <li><a class="dropdown-item" href="#">Tomate</a></li>
+                        <li><a class="dropdown-item" href="#">Picles</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link">Fazer pedido</a>
+                    <a href="#" class="card-link"></a>
+                </div>
+            </div>
+            <div class="card col-12 col-md-3">
+                <img src="imgs/burguer_1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <hr>
+                    <h5 class="card-title">Hamburguer</h5>
+                    <p class="card-text">Muito mais saboroso e agora com molho especial.</p>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Composição
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pão</a></li>
+                        <li><a class="dropdown-item" href="#">Carne</a></li>
+                        <li><a class="dropdown-item" href="#">Queijo Cheddar</a></li>
+                        <li><a class="dropdown-item" href="#">Cebola Roxa</a></li>
+                        <li><a class="dropdown-item" href="#">Tomate</a></li>
+                        <li><a class="dropdown-item" href="#">Picles</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link">Fazer pedido</a>
+                    <a href="#" class="card-link"></a>
+                </div>
+            </div>
+            <div class="card col-12 col-md-3">
+                <img src="imgs/burguer_1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <hr>
+                    <h5 class="card-title">Hamburguer</h5>
+                    <p class="card-text">Muito mais saboroso e agora com molho especial.</p>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Composição
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pão</a></li>
+                        <li><a class="dropdown-item" href="#">Carne</a></li>
+                        <li><a class="dropdown-item" href="#">Queijo Cheddar</a></li>
+                        <li><a class="dropdown-item" href="#">Cebola Roxa</a></li>
+                        <li><a class="dropdown-item" href="#">Tomate</a></li>
+                        <li><a class="dropdown-item" href="#">Picles</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link">Fazer pedido</a>
+                    <a href="#" class="card-link"></a>
+                </div>
+            </div>
+            <div class="card col-12 col-md-3">
+                <img src="imgs/burguer_1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <hr>
+                    <h5 class="card-title">Hamburguer</h5>
+                    <p class="card-text">Muito mais saboroso e agora com molho especial.</p>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Composição
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pão</a></li>
+                        <li><a class="dropdown-item" href="#">Carne</a></li>
+                        <li><a class="dropdown-item" href="#">Queijo Cheddar</a></li>
+                        <li><a class="dropdown-item" href="#">Cebola Roxa</a></li>
+                        <li><a class="dropdown-item" href="#">Tomate</a></li>
+                        <li><a class="dropdown-item" href="#">Picles</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link">Fazer pedido</a>
+                    <a href="#" class="card-link"></a>
+                </div>
+            </div>
+            <div class="card col-12 col-md-3">
+                <img src="imgs/burguer_1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <hr>
+                    <h5 class="card-title">Hamburguer</h5>
+                    <p class="card-text">Muito mais saboroso e agora com molho especial.</p>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Composição
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pão</a></li>
+                        <li><a class="dropdown-item" href="#">Carne</a></li>
+                        <li><a class="dropdown-item" href="#">Queijo Cheddar</a></li>
+                        <li><a class="dropdown-item" href="#">Cebola Roxa</a></li>
+                        <li><a class="dropdown-item" href="#">Tomate</a></li>
+                        <li><a class="dropdown-item" href="#">Picles</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link">Fazer pedido</a>
+                    <a href="#" class="card-link"></a>
+                </div>
+            </div>
+        </div>
+        <!--Fim dos cards-->
+
+    </section>
+    <!--Fim do section-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Início do Footer-->
+    <footer class="container-fluid text-center text-light">
+        <div>
+            Copyright - Hamburgeek
+
+        </div>
+
+    </footer>
+    <!--Fim do Footer-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+nav {
+    border-radius: 0.5em;
+}
+
+.navbar {
+    background-color: #A03131;
+    filter: drop-shadow(5px 5px 5px rgb(146, 143, 143))
+}
+
+div.card {
+    margin: 1em;
+    text-align: center;
+    background-color: antiquewhite;
+
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-title {
+    color: red;
+}
+
+.carrossel {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+footer {
+    margin-top: 30em;
+    padding: 5em;
+    border-radius: 1em;
+    background-color: #A03131;
+    filter: drop-shadow(5px 5px 5px rgb(146, 143, 143))
+}
