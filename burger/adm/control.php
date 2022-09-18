@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HamburGeek</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
@@ -23,8 +24,13 @@
 
                     $login = $_SESSION['login'];
                     $nome = $_SESSION['nome'];
+                    $nivel = $_SESSION['nivel'];
 
                     echo "Bem vindo, $nome | <a href='../adm/logout.php'>Logout</a>";
+                    if($nivel=='adm'){
+
+                        echo " |<a href='../produto/listarProduto.php'>Gerenciar Produtos</a>";
+                    }
                 } else {
                     echo "
                         <a href='../adm/login.php'>Login</a> |
@@ -36,3 +42,4 @@
         </div>
     </div>
     <div class="container mt-5 text-center">
+        <section>

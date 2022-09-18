@@ -4,20 +4,20 @@
 include "../adm/conexao.php";
 
 
-if (isset($_POST['login'])) {
+if (isset($_POST['nomePdt'])) {
 
     //entrada
-    $login = trim($_POST['login']);
-    $nome = trim($_POST['nome']);
-    $email = trim($_POST['email']);
-    $cel = trim($_POST['cel']);
-    $senha = trim($_POST['senha']);
-    $endereco = trim($_POST['endereco']);
-    $nivel = "usu";
+    $nomePdt = trim($_POST['nomePdt']);
+    $tipoPdt = trim($_POST['tipoPdt']);
+    $tipoPdd = trim($_POST['tipoPdd']);
+    $descricao = trim($_POST['descricao']);
+    $preco = trim($_POST['preco']);
+    $preco = strtr($preco,",",".");
+    $foto ="../foto/noPic.jpg";
 
     //processamento
-    $sql = "insert into user(login,nome,email,celular,senha,endereco,nivel) values
-    ('$login','$nome','$email','$cel','$senha','$endereco','$nivel')";
+    $sql = "insert into produto(nomePdt,tipoPdt,tipoPdd,descricao,preco,foto) values
+    ('$nomePdt','$tipoPdt','$tipoPdd','$descricao','$preco','$foto')";
 
     $incluir = mysqli_query($conexao, $sql);
 
@@ -27,7 +27,7 @@ if (isset($_POST['login'])) {
 
         echo "
             <script>
-                window.location='../adm/login.php';
+                window.location='listarProduto.php';
             </script>
         
         ";
