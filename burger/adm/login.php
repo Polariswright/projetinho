@@ -1,7 +1,7 @@
 <?php
 include "control.php"
 ?>
-<div class="row justify-content-center">
+<div class="row justify-content-end">
     <div class="col-6">
         <div class="card alert bg-warning rounded">
             <div class="card-body alert">

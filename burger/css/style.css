@@ -1,9 +1,38 @@
-section{
-    height: 100%;
+@charset "UTF-8";
+.control {
+    background-color: #A03131;
+    filter: drop-shadow(5px 5px 5px rgb(184, 184, 184));
 }
-.imgPdt{
+
+.ain:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo {
+    width: 20em;
+    height: 4em;
+}
+
+.botao {
+    background-color: #A03131;
+    color: white;
+    border-radius: 8px;
+    filter: drop-shadow(5px 5px 5px rgb(184, 184, 184));
+}
+
+section {
+    min-height: 100%;
+}
+
+.imgPdt {
     width: 5em;
 }
-img{
+
+img {
     width: 100%;
+}
+
+.joca {
+    text-decoration: none;
+    color: aliceblue;
 }

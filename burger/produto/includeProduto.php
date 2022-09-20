@@ -27,7 +27,7 @@ if (isset($_POST['nomePdt'])) {
 
         echo "
             <script>
-                window.location='listarProduto.php';
+                window.location='listProduto.php';
             </script>
         
         ";
@@ -44,8 +44,8 @@ if (isset($_POST['nomePdt'])) {
     }
 } else {
     echo "
-                <p>Esta e uma pagina de tratamento de dados</p>
-                <p>Clique <a href='formUser.php'>aqui</a> para cadastrar um usuário.</p>
+                <p>Esta é uma página de tratamento de dados</p>
+                <p>Clique <a href='formProduto.php'>aqui</a> para cadastrar produtos.</p>
             
             ";
 }
