@@ -17,8 +17,8 @@ if (isset($_POST['login'])) {
         $dados = mysqli_fetch_array($testLogin);
         $nome = $dados['nome'];
         $nivel = $dados['nivel'];
-        $cel = $dados['cel'];
-        $tel = $dados['tel'];
+        $cel = $dados['celular'];
+        $email = $dados['email'];
         $endereco = $dados['endereco'];
 
         if (!isset($_SESSION)) {
@@ -26,9 +26,9 @@ if (isset($_POST['login'])) {
         }
         $_SESSION['login'] = $login;
         $_SESSION['nome'] = $nome;
-        $_SESSION['tel'] = $tel;
+        $_SESSION['email'] = $email;
         $_SESSION['nivel'] = $nivel;
-        $_SESSION['cel'] = $cel;
+        $_SESSION['celular'] = $cel;
         $_SESSION['endereco'] = $endereco;
 
         if ($nivel == 'adm') {

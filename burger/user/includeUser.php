@@ -13,7 +13,7 @@ if (isset($_POST['login'])) {
     $cel = trim($_POST['cel']);
     $senha = trim($_POST['senha']);
     $endereco = trim($_POST['endereco']);
-    $nivel = "usu";
+    $nivel = "user";
 
     //processamento
     $sql = "insert into user(login,nome,email,celular,senha,endereco,nivel) values

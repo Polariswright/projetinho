@@ -12,29 +12,31 @@ include "../adm/control.php";
                 </h1>
                 <hr>
                 <form name="form" action="includeProduto.php" class="was-validated" method="POST">
-                    <div class="mb-3 mt-3">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="nomePdt" name="nomePdt" placeholder="Nome do Produto" required>
                         <label for="nomePdt" class="form-label">Nome do produto:</label>
-                        <input type="text" class="form-control" id="nomePdt" name="nomePdt" required>
 
                     </div>
-                    <div class="mb-3 mt-3">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="tipoPdt" name="tipoPdt" placeholder="Tipo de Produto" required>
                         <label for="tipoPdt" class="form-label">Tipo de produto:</label>
-                        <input type="text" class="form-control" id="tipoPdt" name="tipoPdt" required>
 
                     </div>
-                    <div class="mb-3 mt-3">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="tipoPdd" name="tipoPdd" placeholder="Tipo de Pedido" required>
                         <label for="tipoPdd" class="form-label">Tipo de pedido:</label>
-                        <input type="text" class="form-control" id="tipoPdd" name="tipoPdd" required>
 
                     </div>
-                    <div class="mb-3 mt-3">
-                        <label for="preco" class="form-label">Preço do produto:</label>
-                        <input type="text" class="form-control" id="preco" name="preco" required maxlength="20">
-
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">R$</span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="preco" name="preco" placeholder="Preço">
+                            <label for="preco">Preço</label>
+                        </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="descricao" rows="3" maxlength="150" name="descricao" placeholder="Descrição"></textarea>
                         <label for="descricao" class="form-label">Descição do produto</label>
-                        <textarea class="form-control" id="descricao" rows="3" maxlength="150" name="descricao"></textarea>
                     </div>
                     <!-- Botão para abrir o  Modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">

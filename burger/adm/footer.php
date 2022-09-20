@@ -1,7 +1,7 @@
 </section>
 </div>
-<div class="container-fluid text-light bg-warning p-3">
-   <footer class="text-center text-dark ">
+<div class="container-fluid text-light control border-top border-dark p-3">
+   <footer class="text-center text-light ">
         &#169Copyright
     </footer>
 </div>
