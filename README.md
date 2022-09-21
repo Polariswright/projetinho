@@ -14,5 +14,5 @@ Algumas informações extras sobre o projeto:
 <li><strong>Polaris:</strong> Responsável pela implementação do Javascript no site e organização do repositório, e co-responsável pelo design do site.</li>
 <li><strong>Marcus: </strong> Responsável pela implementação do PHP no site e pelo banco de dados do projeto, também responsável pelos debuggs. </li>
 <li><strong>Arthur:</strong> Responsável pela documentação do projeto.</li>
-</ol>
+</ol>omg
 
