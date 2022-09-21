@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HamburGeek</title>
+    <script src="../js/script.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
-<body>
+<body >
     <div class="container-fluid text-light border-bottom border-dark control p-3">
         <div class="row">
             <div class="col text-start logo">
@@ -26,7 +27,7 @@
                     $nome = $_SESSION['nome'];
                     $nivel = $_SESSION['nivel'];
                 ?>
-                    <div class="joca dropdown dropend">
+                    <div class="joca dropdown dropstart">
                         <a class="dropdown-toggle joca" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -81,4 +82,4 @@
         </div>
     </div>
     <div class="container mt-5 text-center">
-        <section class="heigth">
+        <section class="heigth" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">

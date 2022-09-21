@@ -2,52 +2,9 @@
 include "control.php";
 include "conexao.php";
 $sql = "select * from produto order by tipoPdt";
-$sql1 = "select tipoPdt from produto where tipoPdt='Hamburguer'";
-$sql2 = "select tipoPdt from produto where tipoPdt='Batata'";
-$sql3 = "select tipoPdt from produto where  tipoPdt='Bebida'";
 $seleciona = mysqli_query($conexao, $sql);
-$burger = mysqli_query($conexao, $sql1);
-$potato = mysqli_query($conexao, $sql2);
-$drink = mysqli_query($conexao, $sql3);
 
 ?>
-<div class="row">
-  <div class="col">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Search">
-      <button class="btn btn-success" type="submit">Go</button>
-    </div>
-  </div>
-  <div class="col text-end">
-    <h4><a class="" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-          <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
-        </svg>
-        Filtrar</a>
-    </h4>
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Filtro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <h1>Categoria</h1>
-        <form action="#" method="get" name="form">
-          <select class="form-select" aria-label="Default select example" name="category">
-            <option selected>Open this select menu</option>
-            <option >Burger</option>
-            <option >Potato</option>
-            <option >Drink</option>
-          </select>
-          <hr>
-          <button type="submit" class="btn btn-outline-danger">Confirmar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-</div>
 
 <!--Início do Carrossel-->
 <div class="carrossel m-5 border border-dark">
@@ -78,19 +35,27 @@ $drink = mysqli_query($conexao, $sql3);
 <hr>
 
 
-<div class="row mt-2">
+<div class="row">
   <?php
   //Loop do card no index
   while ($exibe = mysqli_fetch_array($seleciona)) {
     $idProd = $exibe['idProd'];
   ?>
 
-    <div class="col">
+    <div class="col-12 col-md-4">
       <!--Card do index(padrão/ caso ocorra mudança no tipo de card, se atentar ao lugar do PHP aberto)-->
-      <div class="card m-3" style="width: 18rem;">
-        <img src="<?php echo $exibe['foto'] ?>" class="card-img-top">
-        <div class="card-body">
-          <p class="card-text"><?php echo $exibe['nomePdt'] ?></p>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $exibe['nomePdt'] ?></h5>
+              <p class="card-text"><?php echo $exibe['descricao'] ?></p>
+              <p class="card-text"><small class="text-muted"><?php echo number_format($exibe['preco'], 2, ',', '.') ?></small></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="<?php echo $exibe['foto'] ?>" class="img-fluid rounded-start" alt="...">
+          </div>
         </div>
       </div>
       <!--Card do index-->
@@ -100,6 +65,8 @@ $drink = mysqli_query($conexao, $sql3);
   }
   ?>
 </div>
+
+
 
 <?php
 include "footer.php";
