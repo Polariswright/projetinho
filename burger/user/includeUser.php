@@ -12,40 +12,48 @@ if (isset($_POST['login'])) {
     $email = trim($_POST['email']);
     $cel = trim($_POST['cel']);
     $senha = trim($_POST['senha']);
+    $senhaC = trim($_POST['senhaC']);
     $endereco = trim($_POST['endereco']);
     $nivel = "user";
-
-    //processamento
-    $sql = "insert into user(login,nome,email,celular,senha,endereco,nivel) values
-    ('$login','$nome','$email','$cel','$senha','$endereco','$nivel')";
-
-    $incluir = mysqli_query($conexao, $sql);
-
-
-    //saida
-    if ($incluir) {
-
-        echo "
-            <script>
-                window.location='../adm/login.php';
-            </script>
-        
-        ";
+    if ($senhaC != $senha) {
+?>
+        <!--pequena notificação para caso a senha esteja incorreta(pode ser modificada)-->
+        <div class="container mt-3">
+            <div class="alert alert-danger alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                Senhas não conferem.
+            </div>
+        </div>
+<?php
     } else {
 
-        echo "
-            <p>Sistema temporariamente fora do ar. Tente
-            novamente mais tarde.</p>
-            <p>Entre em contato com o Admnistrador do
-            Sistema.</p>
-        
-        ";
-        echo mysqli_error($conexao);
+
+        //processamento
+        $sql = "insert into user(login,nome,email,celular,senha,endereco,nivel) values
+        ('$login','$nome','$email','$cel','$senha','$endereco','$nivel')";
+
+        $incluir = mysqli_query($conexao, $sql);
+
+
+        //saida
+        if ($incluir) {
+
+            echo "
+                    <script>
+                        window.location='../adm/login.php';
+                    </script>
+                
+                ";
+        } else {
+
+            echo "
+                    <p>Sistema temporariamente fora do ar. Tente
+                    novamente mais tarde.</p>
+                    <p>Entre em contato com o Admnistrador do
+                    Sistema.</p>
+                
+                ";
+            echo mysqli_error($conexao);
+        }
     }
-} else {
-    echo "
-                <p>Esta e uma pagina de tratamento de dados</p>
-                <p>Clique <a href='formUser.php'>aqui</a> para cadastrar um usuário.</p>
-            
-            ";
 }

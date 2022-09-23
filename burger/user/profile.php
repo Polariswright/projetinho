@@ -9,6 +9,10 @@ if (isset($_GET['login'])) {
     $sql = "select * from user where login='$login'";
     $seleciona = mysqli_query($conexao, $sql);
     $exibe = mysqli_fetch_array($seleciona);
+    $nome =$exibe['nome'];
+    $email =$exibe['email'];
+    $celular =$exibe['celular'];
+    $endereco =$exibe['endereco'];
 } else {
 
     $erro++;
@@ -22,14 +26,25 @@ if (isset($_GET['login'])) {
                 Meus dados
             </h1>
             <ul class="list-group list-group-flush">
-                
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
+
+                <li class="list-group-item">Nome: <?php echo $login ?></li>
+                <li class="list-group-item">Nome: <?php echo $nome ?></li>
+                <li class="list-group-item">Email: <?php echo $email ?></li>
+                <li class="list-group-item">Endereço: <?php echo $endereco ?></li>
+                <li class="list-group-item">Celular: <?php echo $celular?></li>
             </ul>
 
         </div>
     </div>
+    <div class="col">
+        <a href="editUser.php" class="btn btn-info btn-sm">
+            Editar Dados
+        </a>
+    </div>
+    <div class="col">
+        <a href="deletUser.php" class="btn btn-danger btn-sm">
+            Excluir Conta
+        </a>
+    </div>
 </div>
+<?php include "../adm/footer.php" ?>
