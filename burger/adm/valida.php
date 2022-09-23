@@ -35,7 +35,7 @@ if (isset($_POST['login'])) {
             echo "<script> window.location = 'adm.php'</script>";
         } else {
 
-            echo "<script> window.location = 'index.php'</script>";
+            echo "<script> window.location = 'home.php'</script>";
         }
     } else {
 

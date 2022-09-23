@@ -6,7 +6,7 @@ if(isset($_GET['idProd'])){
 
     $idProd =$_GET['idProd'];
 
-    $sql="delete from usuario where idProd='$idProd'";
+    $sql="delete from produto where idProd='$idProd'";
     $excluir=mysqli_query($conexao,$sql);
     if($excluir){
         header('location: listProduto.php');
