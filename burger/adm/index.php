@@ -50,7 +50,7 @@ $seleciona = mysqli_query($conexao, $sql);
             <div class="card-body">
               <h5 class="card-title"><?php echo $exibe['nomePdt'] ?></h5>
               <p class="card-text"><?php echo $exibe['descricao'] ?></p>
-              <p class="card-text"><small class="text-muted"><?php echo "R$" . number_format($exibe['preco'], 2, ',', '.') ?></small></p>
+              <p class="card-text"><small class="text-muted"><?php echo number_format($exibe['preco'], 2, ',', '.') ?></small></p>
             </div>
           </div>
           <div class="col-md-4">

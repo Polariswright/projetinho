@@ -38,19 +38,11 @@ include "../adm/control.php";
                         <textarea class="form-control" id="descricao" rows="3" maxlength="150" name="descricao" placeholder="Descrição"></textarea>
                         <label for="descricao" class="form-label">Descição do produto</label>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <!-- Botão para abrir o  Modal -->
-                            <button class="btn btn-danger " onclick="window.history.go(-1)">
-                                Voltar
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                                Cadastrar produto
-                            </button>
-                        </div>
-                    </div>
+                    <!-- Botão para abrir o  Modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Cadastrar produto
+                    </button>
+
                     <!--Inicio do Modal(modal padrão que pode ser modificado) -->
                     <div class="modal text-center" id="myModal">
                         <div class="modal-dialog">

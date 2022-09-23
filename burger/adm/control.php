@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HamburGeek</title>
     <script src="../js/script.js"></script>
-    <link rel="shortcut icon" href="../imgs/favicoun.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        #carousel{
+    filter: drop-shadow(10px 10px 10px  #0000);
+        }
+    </style>
+
 </head>
+
 
 <body>
     <div class="container-fluid text-light border-bottom border-dark control p-3">
+
         <div class="row">
-            <div class="col text-start">
-                <a href="../adm/home.php"><img src="../imgs/logo4.png " alt="" class="logo"></a>
+            <div class="col text-start logo">
+                <a href="../adm/index.php"><img src="../imgs/logo4.png " alt=""></a>
             </div>
             <div class="col text-end p-3">
                 <?php
@@ -27,27 +34,51 @@
                     $login = $_SESSION['login'];
                     $nome = $_SESSION['nome'];
                     $nivel = $_SESSION['nivel'];
-
                 ?>
-                    <?php
-                    if ($nivel == 'adm') {
-                        echo "Bem vindo $nome | "
-                    ?>
 
-                        <a href="../produto/listProduto.php" class="joca">
-                            Gerenciar Produtos
-                        </a>
+                    <div class="joca dropdown dropstart">
+                        <a class="dropdown-toggle joca" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
-                    <?php
-                    } else {
-                    ?>
-                        <a class="btn btn-primary" href="../user/profile.php">
-                            Área do Usuário
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                            </svg>
+                            <?php echo "Bem vindo $nome" ?>
                         </a>
-                    <?php
-                    }
-                    ?>
-                    <a href="../adm/logout.php" class="joca">| Sair</a>
+                        <div class="text-center m-3 ">
+                           <a href="index.php" class="m-2 joca">Início</a>
+                           <a href="cardapio.php" class="m-2 joca">Cardápio</a>
+                            <a href="" class="m-2 joca">Promoções</a>
+                            <a href="" class="m-2 joca">Sobre Nós</a>
+                            <a href="" class="m-2 joca">Teste</a>
+
+                            
+                        </div>
+
+                        <ul class=" dropdown-menu">
+
+                            <?php
+                            if ($nivel == 'adm') {
+                            ?>
+                                <li><a class="dropdown-item" href="../produto/listProduto.php">Gerenciar Produtos</a></li>
+                            <?php } else { ?>
+                                <li><a class="dropdown-item" href="#">Pedidos</a></li>
+                                <li><a class="dropdown-item" href="#">Meus Cupons</a></li>
+                                <li><a class="dropdown-item" href="#">Pagamento</a></li>
+                                <li><a class="dropdown-item" href="#">Fidelidade</a></li>
+                                <li><a class="dropdown-item" href="../user/profile.php?login=<?php echo $login ?>">Meus dados</a></li>
+                            <?php } ?>
+                            <li><a class="dropdown-item" href="../adm/logout.php">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                    </svg>
+                                    Sair
+                                </a></li>
+                        </ul>
+
+                    </div>
                 <?php
                 } else {
                 ?>
@@ -67,7 +98,10 @@
                 }
                 ?>
             </div>
+            <div>
+
+            </div>
         </div>
     </div>
     <div class="container mt-5 text-center">
-        <section class="heigth">
+        <section class="heigth" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
