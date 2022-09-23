@@ -32,10 +32,10 @@ if (isset($_POST['login'])) {
         $_SESSION['endereco'] = $endereco;
 
         if ($nivel == 'adm') {
-            echo "<script> window.location = 'adm.php'</script>";
+            header('location: adm.php');
         } else {
 
-            echo "<script> window.location = 'home.php'</script>";
+            header('location: index.php');
         }
     } else {
 
