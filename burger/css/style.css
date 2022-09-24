@@ -36,34 +36,6 @@ img {
     text-decoration: none;
     color: aliceblue;
 }
-
-div.card {
-    background-color: #f5ebdc;
-    color: #A03131;
-    border: 1px solid black;
-}
-
-a.cadastro {
-    color: #A03131;
-    text-decoration: none;
-    
-    
-}
-button.ok{
-    background-color: #A03131;
-    color: #f5ebdc;
-    border: 1px solid black;
-
-}
-input.caixinha{
-    border: 1px solid black;
-
-}
-
-.fundo{
-    background: url('../imgs/jogoindex.png');
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: contain;
-
-}
+.carrossel{
+filter: drop-shadow(10px 10px 10px  rgba(14, 1, 1, 0));
+        }
