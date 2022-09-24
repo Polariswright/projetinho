@@ -1,6 +1,5 @@
 <?php
-
-
+include "../adm/securityAdm.php";
 include "../adm/conexao.php";
 
 
