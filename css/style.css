@@ -1,0 +1,11 @@
+footer{
+    
+    margin: 30em;
+    padding: 5em;
+    border-radius: 1em;
+    background-color:  #A03131;
+    filter: drop-shadow(5px 5px 5px black);
+}
+.container{
+    background-image: url("imgs/Manga-Panel-Collage.png");
+}
