@@ -1,4 +1,5 @@
 <?php
+include "../adm/securityAdm.php";
 include "../adm/control.php";
 ?>
 
